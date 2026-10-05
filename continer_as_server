@@ -1,0 +1,34 @@
+If we don't have an server to practice, We can use container as an server.
+
+1. Create an container with ubuntu image
+"docker run -d --name server1 ubuntu:24.04 sleep infinity"
+
+2. Verify the container
+"docker ps"
+
+3. Enter the container
+"docker exec -it server1 bash"
+
+4. Update and install the required packages
+"apt update"
+"apt install -y openssh-server"
+"apt install -y python3"
+
+5. Create runtime directory
+" mkdir -p /run/sshd"
+
+6. Start shh manually
+"/usr/sbin/sshd"
+
+7. Verify ssh is running
+""ps aux | grep '[s]shd'"
+
+8. create user and set password
+
+9. Install sudo
+"apt install -y sudo"
+
+10. Add user to sudo grp
+
+11. Return back to your machine and find  ip of the container
+"docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' server1"
