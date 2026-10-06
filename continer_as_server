@@ -17,7 +17,7 @@ If we don't have an server to practice, We can use container as an server.
 5. Create runtime directory
 " mkdir -p /run/sshd"
 
-6. Start shh manually
+6. Start ssh manually
 "/usr/sbin/sshd"
 
 7. Verify ssh is running
