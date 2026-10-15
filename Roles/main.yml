@@ -1,0 +1,7 @@
+---
+- name: Deploying an website
+  hosts: all
+  become: true
+
+  roles:
+    - nginx
